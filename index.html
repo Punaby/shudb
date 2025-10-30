@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hyperbeam Demo</title>
+  <script src="https://cdn.hyperbeam.com/widget.js"></script>
+</head>
+<body>
+  <h1>Welcome to Hyperbeam</h1>
+  <div id="hyperbeam-container" style="width: 100%; height: 600px;"></div>
+
+  <script>
+    const hb = new Hyperbeam('sk_test_io8eOBNW0bLfT9NpPDSkbY8l5pfUYXA75zQkPH3bAVg'); // Replace with your actual key
+    hb.createSession().then(session => {
+      hb.mount(document.getElementById('hyperbeam-container'), session.embedUrl);
+    });
+  </script>
+</body>
+</html>
